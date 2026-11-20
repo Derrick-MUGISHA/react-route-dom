@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 import useAutoSlide from "../hook/useAutoSlide";
 
@@ -37,12 +38,12 @@ export default function Hero({ title, description, images, featuredProduct }) {
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <a
-                href="#products"
+              <Link
+                to="/products"
                 className="rounded-full bg-orange-500 px-8 py-4 font-bold text-white shadow-lg shadow-orange-500/25 transition hover:bg-orange-400"
               >
                 Shop the collection
-              </a>
+              </Link>
               <a
                 href="#about"
                 className="rounded-full border border-white/50 px-8 py-4 font-semibold text-white transition hover:bg-white/10"
@@ -80,12 +81,12 @@ export default function Hero({ title, description, images, featuredProduct }) {
                   ${featuredProduct.price}
                 </p>
               </div>
-              <a
-                href="#products"
+              <Link
+                to={`/products/${featuredProduct.slug}`}
                 className="mt-4 block rounded-xl bg-gray-950 px-5 py-3 text-center font-semibold text-white transition hover:bg-orange-600"
               >
                 View product
-              </a>
+              </Link>
             </div>
           )}
         </div>

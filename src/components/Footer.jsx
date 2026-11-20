@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function ContactIcon({ type }) {
   const path =
@@ -46,13 +47,13 @@ export default function Footer({ brand, description, links }) {
 
           <div className="flex flex-col gap-2">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-gray-400 hover:text-orange-500 transition"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
